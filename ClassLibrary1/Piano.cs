@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System.IO;
+using System.Xml.Serialization;
+
 
 
 
@@ -17,6 +19,8 @@ namespace ClassLibrary1
         public string Firm { get; set; }
         public string Material { get; set; }
         public DateTime Release_data { get; set; }
+        public Piano()
+        { }
 
         public Piano(Nomenklatura ID, string Firm, string Material, double Price, DateTime Release_data) : base(ID, Price)
         {

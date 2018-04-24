@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System.IO;
+using System.Xml.Serialization;
+
 
 namespace ClassLibrary1
 {
@@ -15,6 +17,8 @@ namespace ClassLibrary1
         public string material { get; set; }
         public string Marka_instrumenta { get; set; }
         public DateTime Release_data { get; set; }
+        public Baraban()
+        { }
 
         public Baraban(Nomenklatura ID, string Marka_instrumenta, string material,  double Price, DateTime Release_data) : base(ID, Price)
         {

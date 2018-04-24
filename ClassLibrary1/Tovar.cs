@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System.IO;
+using System.Xml.Serialization;
+
 
 
 
@@ -16,6 +18,8 @@ namespace ClassLibrary1
     {
         public Nomenklatura ID { get; set; }
         public double Price { get; set; }
+        public Tovar()
+        { }
 
         public Tovar (Nomenklatura ID, double Price)
         {

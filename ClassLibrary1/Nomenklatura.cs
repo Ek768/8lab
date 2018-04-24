@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System.IO;
+using System.Xml.Serialization;
+
 
 
 namespace ClassLibrary1
@@ -15,6 +17,8 @@ namespace ClassLibrary1
     {
         public string Name { get; set; }
         public DateTime Data_registration { get; set; }
+        public Nomenklatura()
+        { }
    
         public Nomenklatura (string Name, DateTime Data_registration)
 
