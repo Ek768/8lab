@@ -1,0 +1,16 @@
+E:\ПРОГРАММИРОВАНИЕ\8лаба\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe.config
+E:\ПРОГРАММИРОВАНИЕ\8лаба\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe
+E:\ПРОГРАММИРОВАНИЕ\8лаба\ConsoleApplication2\bin\Debug\ConsoleApplication2.pdb
+E:\ПРОГРАММИРОВАНИЕ\8лаба\ConsoleApplication2\bin\Debug\ClassLibrary1.dll
+E:\ПРОГРАММИРОВАНИЕ\8лаба\ConsoleApplication2\bin\Debug\ClassLibrary1.pdb
+E:\ПРОГРАММИРОВАНИЕ\8лаба\ConsoleApplication2\obj\Debug\ConsoleApplication2.csprojResolveAssemblyReference.cache
+E:\ПРОГРАММИРОВАНИЕ\8лаба\ConsoleApplication2\obj\Debug\ConsoleApplication2.exe
+E:\ПРОГРАММИРОВАНИЕ\8лаба\ConsoleApplication2\obj\Debug\ConsoleApplication2.pdb
+E:\ПРОГРАММИРОВАНИЕ\8лаб\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe.config
+E:\ПРОГРАММИРОВАНИЕ\8лаб\ConsoleApplication2\obj\Debug\ConsoleApplication2.exe
+E:\ПРОГРАММИРОВАНИЕ\8лаб\ConsoleApplication2\obj\Debug\ConsoleApplication2.pdb
+E:\ПРОГРАММИРОВАНИЕ\8лаб\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe
+E:\ПРОГРАММИРОВАНИЕ\8лаб\ConsoleApplication2\bin\Debug\ConsoleApplication2.pdb
+E:\ПРОГРАММИРОВАНИЕ\8лаб\ConsoleApplication2\bin\Debug\ClassLibrary1.dll
+E:\ПРОГРАММИРОВАНИЕ\8лаб\ConsoleApplication2\bin\Debug\ClassLibrary1.pdb
+E:\ПРОГРАММИРОВАНИЕ\8лаб\ConsoleApplication2\obj\Debug\ConsoleApplication2.csprojResolveAssemblyReference.cache
