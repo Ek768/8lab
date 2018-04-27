@@ -14,7 +14,7 @@ namespace ConsoleApplication2_
     {
         static void Main(string[] args)
         {
-           // OutputHandler CurrentHandler = new WindowsDotNetConsoleHandler(); // выводит данные в консоль windows.
+           
             Nomenklatura gitara_nomenklatura = new Nomenklatura("gitara", new DateTime(2018, 02, 05));
             Nomenklatura skripka_nomenklatura = new Nomenklatura("skripka", new DateTime(2018, 01, 28));
             Nomenklatura mediator_nomenklatura = new Nomenklatura("Mediator", new DateTime(2018, 01, 28));
@@ -54,14 +54,15 @@ namespace ConsoleApplication2_
             {
                 formatter.Serialize(fs, ListTovar);
                 Console.WriteLine("Сериализация XML прошла успешно");
-            }
+            }          
             using (FileStream fs = new FileStream("tovar.xml", FileMode.OpenOrCreate))
             {
                 List<Tovar> ListDeserTovar = formatter.Deserialize(fs) as List<Tovar>;
                 foreach (Tovar tv in ListDeserTovar)
                 {
-                    Console.WriteLine("Объект десериализован");
-                    Console.WriteLine("Номенклатура: {0} ; Цена: {1}", tv.ID, tv.Price);
+                    
+                    Console.WriteLine("Товар: {0} ; Цена: {1}", tv.ID, tv.Price);
+                    
                 }
             }
             Console.ReadLine();

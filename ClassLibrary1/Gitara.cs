@@ -7,16 +7,22 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System.IO;
 using System.Xml.Serialization;
+using System.Runtime.Serialization.Json;
+
 
 
 namespace ClassLibrary1
 {
     [Serializable]
-    
+    [DataContract]
+
     public class Gitara : Tovar
     {
+        [DataMember]
         public string Vid_instrumenta { get; set; }
+        [DataMember]
         public string Marka_instrumenta { get; set; }
+        [DataMember]
         public DateTime Release_data { get; set; }
         public Gitara()
         { }

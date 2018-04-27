@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using ClassLibrary1;
 using System.IO;
-//using System.Runtime.Serialization.Json;
 using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
 
 namespace ConsoleApplication2__
 {
@@ -35,20 +35,33 @@ namespace ConsoleApplication2__
             ListTovar.Add(tovar5);
 
 
-            Tovar[] tovar = new Tovar[] { tovar1, tovar2, tovar3, tovar4, tovar5 };
-            DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(Tovar[]));
-            using (FileStream fs = new FileStream("tovar.xml", FileMode.OpenOrCreate))
+            List<Type> TypeList = new List<Type>();
+            foreach (Tovar t in ListTovar)
             {
-                jsonFormatter.WriteObject(fs, tovar);
-                Console.WriteLine("Сериализация XML прошла успешно");
-            }
-            using (FileStream fs = new FileStream("tovar.xml", FileMode.OpenOrCreate))
-            {
-                Tovar[] newTovar = (Tovar[])jsonFormatter.ReadObject(fs);
-                foreach (Tovar tv in newTovar)
+                try
                 {
-                    Console.WriteLine("Объект десериализован");
-                    Console.WriteLine("Номенклатура: {0} ; Цена: {1}", tv.ID, tv.Price);
+                    TypeList.Add(t.GetType());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Ошибка {0}", ex.Message);
+                }
+            }
+         
+            DataContractJsonSerializer js = new DataContractJsonSerializer(ListTovar.GetType(), TypeList.ToArray());
+            using (FileStream fs = new FileStream("tovar.json", FileMode.OpenOrCreate))
+            {
+                js.WriteObject(fs, ListTovar);
+                Console.WriteLine("Сериализация JSON прошла успешно");
+            }
+            using (FileStream fs = new FileStream("tovar.json", FileMode.OpenOrCreate))
+            {
+                List<Tovar> ListDeserTovar = js.ReadObject(fs) as List<Tovar>;
+                foreach (Tovar tv in ListDeserTovar)
+                {
+
+                    Console.WriteLine("Товар: {0} ; Цена: {1}", tv.ID, tv.Price);
+
                 }
             }
             Console.ReadLine();

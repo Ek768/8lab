@@ -7,3 +7,4 @@ E:\ПРОГРАММИРОВАНИЕ\8лаб\ClassLibrary1\bin\Debug\ClassLibrary
 E:\ПРОГРАММИРОВАНИЕ\8лаб\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
 E:\ПРОГРАММИРОВАНИЕ\8лаб\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 E:\ПРОГРАММИРОВАНИЕ\8лаб\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+E:\ПРОГРАММИРОВАНИЕ\8лаб\ClassLibrary1\obj\Debug\ClassLibrary1.csprojResolveAssemblyReference.cache
