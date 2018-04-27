@@ -5,16 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using ClassLibrary1;
 using System.IO;
-using System.Xml.Serialization;
+//using System.Runtime.Serialization.Json;
+using System.Runtime.Serialization;
 
-
-namespace ConsoleApplication2_
+namespace ConsoleApplication2__
 {
     class Program
     {
         static void Main(string[] args)
         {
-           // OutputHandler CurrentHandler = new WindowsDotNetConsoleHandler(); // выводит данные в консоль windows.
             Nomenklatura gitara_nomenklatura = new Nomenklatura("gitara", new DateTime(2018, 02, 05));
             Nomenklatura skripka_nomenklatura = new Nomenklatura("skripka", new DateTime(2018, 01, 28));
             Nomenklatura mediator_nomenklatura = new Nomenklatura("Mediator", new DateTime(2018, 01, 28));
@@ -27,7 +26,7 @@ namespace ConsoleApplication2_
             Piano tovar4 = new Piano(piano_nomenklatura, "C.Bechstein", "wood", 80000, new DateTime(2017, 10, 10));
             Accessories tovar5 = new Accessories(mediator_nomenklatura, "Mediator", 100, gitara_nomenklatura);
 
-            
+
             List<Tovar> ListTovar = new List<Tovar>();
             ListTovar.Add(tovar1);
             ListTovar.Add(tovar2);
@@ -35,30 +34,18 @@ namespace ConsoleApplication2_
             ListTovar.Add(tovar4);
             ListTovar.Add(tovar5);
 
-            List<Type> TypeList = new List<Type>();
-            foreach (Tovar t in ListTovar) 
-            {
-                try
-                {
-                    TypeList.Add(t.GetType());
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Ошибка {0}", ex.Message);
-                }
-            }
 
-            //Tovar[] tovar = new Tovar[] { tovar1, tovar2, tovar3, tovar4, tovar5 };
-            XmlSerializer formatter = new XmlSerializer(ListTovar.GetType(), TypeList.ToArray());
+            Tovar[] tovar = new Tovar[] { tovar1, tovar2, tovar3, tovar4, tovar5 };
+            DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(Tovar[]));
             using (FileStream fs = new FileStream("tovar.xml", FileMode.OpenOrCreate))
             {
-                formatter.Serialize(fs, ListTovar);
+                jsonFormatter.WriteObject(fs, tovar);
                 Console.WriteLine("Сериализация XML прошла успешно");
             }
             using (FileStream fs = new FileStream("tovar.xml", FileMode.OpenOrCreate))
             {
-                List<Tovar> ListDeserTovar = formatter.Deserialize(fs) as List<Tovar>;
-                foreach (Tovar tv in ListDeserTovar)
+                Tovar[] newTovar = (Tovar[])jsonFormatter.ReadObject(fs);
+                foreach (Tovar tv in newTovar)
                 {
                     Console.WriteLine("Объект десериализован");
                     Console.WriteLine("Номенклатура: {0} ; Цена: {1}", tv.ID, tv.Price);
@@ -67,4 +54,5 @@ namespace ConsoleApplication2_
             Console.ReadLine();
         }
     }
-}
+    }
+

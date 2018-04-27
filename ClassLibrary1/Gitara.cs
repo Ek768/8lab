@@ -12,6 +12,7 @@ using System.Xml.Serialization;
 namespace ClassLibrary1
 {
     [Serializable]
+    
     public class Gitara : Tovar
     {
         public string Vid_instrumenta { get; set; }

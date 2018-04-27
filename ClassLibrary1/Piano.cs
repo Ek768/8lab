@@ -14,6 +14,7 @@ using System.Xml.Serialization;
 namespace ClassLibrary1
 {
     [Serializable]
+    
     public class Piano: Tovar
     {
         public string Firm { get; set; }

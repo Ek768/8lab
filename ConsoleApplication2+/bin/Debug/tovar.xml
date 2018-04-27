@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<ArrayOfTovar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Tovar xsi:type="Gitara">
+    <ID>
+      <Name>gitara</Name>
+      <Data_registration>2018-02-05T00:00:00</Data_registration>
+    </ID>
+    <Price>15000</Price>
+    <Vid_instrumenta>electric_guitar</Vid_instrumenta>
+    <Marka_instrumenta>YAMAHA</Marka_instrumenta>
+    <Release_data>2015-03-07T00:00:00</Release_data>
+  </Tovar>
+  <Tovar xsi:type="Skripka">
+    <ID>
+      <Name>skripka</Name>
+      <Data_registration>2018-01-28T00:00:00</Data_registration>
+    </ID>
+    <Price>50000</Price>
+    <Marka_instrumenta>Crafter</Marka_instrumenta>
+    <Size>1</Size>
+    <Release_data>2017-05-08T00:00:00</Release_data>
+  </Tovar>
+  <Tovar xsi:type="Baraban">
+    <ID>
+      <Name>baraban</Name>
+      <Data_registration>2016-09-10T00:00:00</Data_registration>
+    </ID>
+    <Price>7000</Price>
+    <material>wood - leather</material>
+    <Marka_instrumenta>YAMAHA</Marka_instrumenta>
+    <Release_data>2016-09-10T00:00:00</Release_data>
+  </Tovar>
+  <Tovar xsi:type="Piano">
+    <ID>
+      <Name>piano</Name>
+      <Data_registration>2017-10-10T00:00:00</Data_registration>
+    </ID>
+    <Price>80000</Price>
+    <Firm>C.Bechstein</Firm>
+    <Material>wood</Material>
+    <Release_data>2017-10-10T00:00:00</Release_data>
+  </Tovar>
+  <Tovar xsi:type="Accessories">
+    <ID>
+      <Name>Mediator</Name>
+      <Data_registration>2018-01-28T00:00:00</Data_registration>
+    </ID>
+    <Price>100</Price>
+    <Name>Mediator</Name>
+  </Tovar>
+</ArrayOfTovar>

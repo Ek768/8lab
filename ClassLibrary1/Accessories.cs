@@ -13,6 +13,7 @@ using System.Xml.Serialization;
 namespace ClassLibrary1
 {
     [Serializable]
+   
     public class Accessories: Tovar, IAccessories
     {
         public string Name { get; set; }

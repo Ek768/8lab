@@ -14,6 +14,7 @@ using System.Xml.Serialization;
 namespace ClassLibrary1
 {
     [Serializable]
+  
     public class Skripka: Tovar
     {
         public string Marka_instrumenta { get; set; }

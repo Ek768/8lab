@@ -12,6 +12,7 @@ using System.Xml.Serialization;
 namespace ClassLibrary1
 {
     [Serializable]
+   
     public class Baraban: Tovar
     {
         public string material { get; set; }

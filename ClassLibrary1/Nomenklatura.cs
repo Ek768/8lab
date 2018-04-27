@@ -13,6 +13,7 @@ using System.Xml.Serialization;
 namespace ClassLibrary1
 {
     [Serializable]
+    
     public class Nomenklatura
     {
         public string Name { get; set; }
